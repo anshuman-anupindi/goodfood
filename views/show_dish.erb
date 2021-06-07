@@ -1,0 +1,14 @@
+<h1>dish details</h1>
+
+<p><%= dish['name'] %></p>
+<p><%= dish['id'] %></p>
+<p><img src="<%= dish['image_url'] %>" alt=""></p>
+
+<% if logged_in? %>
+    <form action="/dishes/<%= dish['id']%>" method="post">
+        <input type="hidden" value="delete" name="_method">
+        <button>delete</button>
+    </form>
+<% end %>
+
+<a href="/dishes/<%= dish['id'] %>/edit">edit</a>
