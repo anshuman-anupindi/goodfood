@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 # only reloads THIS file. changing any other .rb file will require server restart.
-require 'pry'
+require 'pry' if development?
 require 'bcrypt'
 
 require_relative 'db/helpers.rb'
